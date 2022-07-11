@@ -1,0 +1,1488 @@
+2022-07-09 21:25:29 INFO  Tables:23 - java.io.FileReader@7112b21a
+  2022-07-09 21:30:01 INFO  Tables:23 - java.io.FileReader@6e1ad658
+  2022-07-09 21:30:15 INFO  Tables:23 - java.io.FileReader@78aa1753
+  2022-07-09 21:32:50 INFO  Tables:23 - java.io.FileReader@538a90a5
+  2022-07-09 21:37:21 INFO  Tables:24 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-09 21:38:25 INFO  Tables:24 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-09 21:40:47 WARN  Tables:36 - Ejecutando creación de tablas
+  2022-07-09 21:40:47 INFO  Tables:37 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-09 21:40:47 ERROR Tables:46 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 16:56:15 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 16:56:15 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 16:56:15 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 16:57:59 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 16:57:59 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 16:57:59 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 16:58:51 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 16:58:51 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 16:58:51 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 16:59:14 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 16:59:14 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 16:59:14 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 17:18:12 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 17:18:12 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 17:18:12 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 17:24:19 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 17:24:19 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 17:24:19 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 17:25:17 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 17:25:17 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 17:25:17 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 17:25:17 WARN  Tables:85 - Llenando tablas con datos
+  2022-07-10 17:25:17 ERROR Tables:96 - Error cargar tablas con datos: Cannot invoke "com.fasterxml.jackson.databind.ObjectMapper.convertValue(Object, java.lang.Class)" because "this.objectMapper" is null
+  2022-07-10 17:26:38 WARN  Tables:62 - Ejecutando creación de tablas
+  2022-07-10 17:26:38 INFO  Tables:63 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 17:26:38 ERROR Tables:72 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 17:27:00 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 17:27:00 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 17:27:00 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 17:27:00 WARN  Tables:85 - Llenando tablas con datos
+  2022-07-10 17:27:00 ERROR Tables:96 - Error cargar tablas con datos: Cannot invoke "com.fasterxml.jackson.databind.ObjectMapper.convertValue(Object, java.lang.Class)" because "this.objectMapper" is null
+  2022-07-10 17:31:06 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 17:31:06 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 17:31:06 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 17:31:06 WARN  Tables:85 - Llenando tablas con datos
+  2022-07-10 17:35:39 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 17:35:39 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 17:35:39 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 17:35:39 WARN  Tables:85 - Llenando tablas con datos
+  2022-07-10 17:35:39 ERROR Tables:97 - Error cargar tablas con datos: Cannot invoke "com.fasterxml.jackson.databind.ObjectMapper.convertValue(Object, java.lang.Class)" because "this.objectMapper" is null
+  2022-07-10 17:37:04 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 17:37:04 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 17:37:04 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 17:37:04 WARN  Tables:85 - Llenando tablas con datos
+  2022-07-10 17:37:04 ERROR Tables:97 - Error cargar tablas con datos: Cannot invoke "com.fasterxml.jackson.databind.ObjectMapper.convertValue(Object, java.lang.Class)" because "this.objectMapper" is null
+  2022-07-10 17:38:06 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 17:38:06 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 17:38:06 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 17:38:06 WARN  Tables:85 - Llenando tablas con datos
+  2022-07-10 17:38:06 ERROR Tables:96 - Error cargar tablas con datos: Cannot invoke "com.fasterxml.jackson.databind.ObjectMapper.convertValue(Object, java.lang.Class)" because "this.objectMapper" is null
+  2022-07-10 17:38:48 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 17:38:48 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 17:38:48 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 17:38:48 WARN  Tables:83 - Llenando tablas con datos
+  2022-07-10 17:38:48 ERROR Tables:93 - Error cargar tablas con datos: Cannot invoke "com.fasterxml.jackson.databind.ObjectMapper.convertValue(Object, java.lang.Class)" because "this.objectMapper" is null
+  2022-07-10 18:13:31 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 18:13:31 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 18:13:31 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 18:13:31 WARN  Tables:85 - Llenando tablas con datos
+  2022-07-10 18:13:31 ERROR Tables:97 - Error cargar tablas con datos: Cannot invoke "com.example.demo.Repository.IOdontologoRepository.save(Object)" because "this.odontologoRepository" is null
+  2022-07-10 18:14:45 WARN  Tables:64 - Ejecutando creación de tablas
+  2022-07-10 18:14:45 INFO  Tables:65 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 18:14:45 ERROR Tables:74 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 18:14:45 WARN  Tables:88 - Llenando tablas con datos
+  2022-07-10 18:14:45 ERROR Tables:100 - Error cargar tablas con datos: Cannot invoke "com.example.demo.Repository.IOdontologoRepository.save(Object)" because "this.odontologoRepository" is null
+  2022-07-10 18:17:22 WARN  Tables:64 - Ejecutando creación de tablas
+  2022-07-10 18:17:22 INFO  Tables:65 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 18:17:22 ERROR Tables:74 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 18:17:22 WARN  Tables:88 - Llenando tablas con datos
+  2022-07-10 18:17:22 ERROR Tables:100 - Error cargar tablas con datos: Cannot invoke "com.example.demo.Repository.IOdontologoRepository.save(Object)" because "this.odontologoRepository" is null
+  2022-07-10 18:18:14 WARN  Tables:64 - Ejecutando creación de tablas
+  2022-07-10 18:18:14 INFO  Tables:65 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 18:18:14 ERROR Tables:74 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 18:18:14 WARN  Tables:88 - Llenando tablas con datos
+  2022-07-10 18:18:14 ERROR Tables:100 - Error cargar tablas con datos: Cannot invoke "com.example.demo.Repository.IOdontologoRepository.save(Object)" because "this.odontologoRepository" is null
+  2022-07-10 18:19:19 WARN  Tables:64 - Ejecutando creación de tablas
+  2022-07-10 18:19:19 INFO  Tables:65 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 18:19:19 ERROR Tables:74 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 18:19:19 WARN  Tables:88 - Llenando tablas con datos
+  2022-07-10 18:19:19 ERROR Tables:100 - Error cargar tablas con datos: Cannot invoke "com.example.demo.Repository.IOdontologoRepository.save(Object)" because "this.odontologoRepository" is null
+  2022-07-10 18:26:46 WARN  Tables:61 - Ejecutando creación de tablas
+  2022-07-10 18:26:46 INFO  Tables:62 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 18:26:46 ERROR Tables:71 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 18:26:46 WARN  Tables:85 - Llenando tablas con datos
+  2022-07-10 18:26:46 ERROR Tables:97 - Error cargar tablas con datos: Cannot invoke "com.example.demo.Repository.IOdontologoRepository.save(Object)" because "this.odontologoRepository" is null
+  2022-07-10 18:30:52 WARN  Tables:63 - Ejecutando creación de tablas
+  2022-07-10 18:30:52 INFO  Tables:64 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 18:30:52 ERROR Tables:73 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 18:30:52 WARN  Tables:87 - Llenando tablas con datos
+  2022-07-10 18:30:52 ERROR Tables:99 - Error cargar tablas con datos: Cannot invoke "com.example.demo.Repository.IOdontologoRepository.save(Object)" because "this.odontologoRepository" is null
+  2022-07-10 19:19:48 WARN  DataLoader:55 - Ejecutando creación de tablas
+  2022-07-10 19:19:48 INFO  DataLoader:56 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 19:19:48 ERROR DataLoader:65 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 19:19:48 WARN  DataLoader:79 - Llenando tablas con datos
+  2022-07-10 19:20:36 WARN  DataLoader:55 - Ejecutando creación de tablas
+  2022-07-10 19:20:36 INFO  DataLoader:56 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 19:20:36 ERROR DataLoader:65 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 19:20:36 WARN  DataLoader:79 - Llenando tablas con datos
+  2022-07-10 19:20:36 INFO  DataLoader:94 - org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.example.demo.Entities.Odontologo.turno, could not initialize proxy - no Session
+  2022-07-10 19:21:09 WARN  DataLoader:55 - Ejecutando creación de tablas
+  2022-07-10 19:21:09 INFO  DataLoader:56 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 19:21:09 ERROR DataLoader:65 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 19:21:09 WARN  DataLoader:79 - Llenando tablas con datos
+  2022-07-10 19:21:37 WARN  DataLoader:55 - Ejecutando creación de tablas
+  2022-07-10 19:21:37 INFO  DataLoader:56 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 19:21:37 ERROR DataLoader:65 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 19:21:37 WARN  DataLoader:79 - Llenando tablas con datos
+  2022-07-10 19:23:42 WARN  DataLoader:56 - Ejecutando creación de tablas
+  2022-07-10 19:23:42 INFO  DataLoader:57 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 19:23:42 ERROR DataLoader:66 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 19:23:42 WARN  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 19:23:42 INFO  DataLoader:98 - Alfonso
+  2022-07-10 19:23:42 INFO  DataLoader:98 - Hernandez
+  2022-07-10 19:28:20 WARN  DataLoader:64 - Ejecutando creación de tablas
+  2022-07-10 19:28:20 INFO  DataLoader:65 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 19:28:20 ERROR DataLoader:74 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 19:28:20 WARN  DataLoader:85 - Llenando tablas con datos
+  2022-07-10 19:28:20 INFO  DataLoader:106 - Alfonso
+  2022-07-10 19:28:20 INFO  DataLoader:106 - Hernandez
+  2022-07-10 19:29:33 WARN  DataLoader:64 - Ejecutando creación de tablas
+  2022-07-10 19:29:33 INFO  DataLoader:65 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 19:29:33 ERROR DataLoader:74 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 19:29:33 WARN  DataLoader:85 - Llenando tablas con datos
+  2022-07-10 19:29:33 INFO  DataLoader:106 - Alfonso
+  2022-07-10 19:29:33 INFO  DataLoader:106 - Hernandez
+  2022-07-10 19:29:33 INFO  DataLoader:112 - Mendez
+  2022-07-10 19:29:33 INFO  DataLoader:112 - Torcuato
+  2022-07-10 19:29:33 INFO  DataLoader:118 - 2022-07-10 19:29:33.263848
+  2022-07-10 19:29:33 INFO  DataLoader:118 - 2022-07-10 19:29:33.263848
+  2022-07-10 19:30:07 WARN  DataLoader:64 - Ejecutando creación de tablas
+  2022-07-10 19:30:07 INFO  DataLoader:65 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 19:30:07 ERROR DataLoader:74 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 19:30:07 WARN  DataLoader:85 - Llenando tablas con datos
+  2022-07-10 19:30:07 INFO  DataLoader:106 - Alfonso
+  2022-07-10 19:30:07 INFO  DataLoader:106 - Hernandez
+  2022-07-10 19:30:07 INFO  DataLoader:112 - Mendez
+  2022-07-10 19:30:07 INFO  DataLoader:112 - Torcuato
+  2022-07-10 19:30:07 INFO  DataLoader:118 - 2022-07-10 19:30:07.484139
+  2022-07-10 19:30:07 INFO  DataLoader:119 - 1
+  2022-07-10 19:30:07 INFO  DataLoader:120 - 3
+  2022-07-10 19:30:07 INFO  DataLoader:118 - 2022-07-10 19:30:07.484139
+  2022-07-10 19:30:07 INFO  DataLoader:119 - 2
+  2022-07-10 19:30:07 INFO  DataLoader:120 - 4
+  2022-07-10 19:37:15 WARN  DataLoader:64 - Ejecutando creación de tablas
+  2022-07-10 19:37:15 INFO  DataLoader:65 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 19:37:15 ERROR DataLoader:74 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 19:37:15 WARN  DataLoader:85 - Llenando tablas con datos
+  2022-07-10 19:37:15 WARN  DataLoader:99 - Data cargada
+  2022-07-10 20:01:23 WARN  DataLoader:60 - Ejecutando creación de tablas
+  2022-07-10 20:01:23 INFO  DataLoader:61 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+  2022-07-10 20:01:23 ERROR DataLoader:70 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+); [42001-214]
+  2022-07-10 20:01:23 WARN  DataLoader:81 - Llenando tablas con datos
+  2022-07-10 20:01:23 WARN  DataLoader:95 - Data cargada
+  2022-07-10 21:34:55 WARN  DataLoader:60 - Ejecutando creación de tablas
+  2022-07-10 21:34:55 INFO  DataLoader:61 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+
+DROP TABLE IF EXISTS Usuarios;
+CREATE TABLE Usuarios(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    username VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    role VARCHAR(255)
+);
+  2022-07-10 21:34:55 ERROR DataLoader:70 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);\000d\000a\000d\000aDROP TABLE IF EXISTS Usuarios;\000d\000aCREATE TABLE Usuarios(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    nombre VARCHAR(255),\000d\000a    username VARCHAR(255),\000d\000a    email VARCHAR(255),\000d\000a    password VARCHAR(255),\000d\000a    role VARCHAR(255)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);\000d\000a\000d\000aDROP TABLE IF EXISTS Usuarios;\000d\000aCREATE TABLE Usuarios(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    nombre VARCHAR(255),\000d\000a    username VARCHAR(255),\000d\000a    email VARCHAR(255),\000d\000a    password VARCHAR(255),\000d\000a    role VARCHAR(255)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+
+DROP TABLE IF EXISTS Usuarios;
+CREATE TABLE Usuarios(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    username VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    role VARCHAR(255)
+); [42001-214]
+  2022-07-10 21:34:55 WARN  DataLoader:81 - Llenando tablas con datos
+  2022-07-10 21:34:55 WARN  DataLoader:95 - Data cargada
+  2022-07-10 21:36:53 WARN  DataLoader:60 - Ejecutando creación de tablas
+  2022-07-10 21:36:53 INFO  DataLoader:61 - DROP TABLE IF EXISTS Odontologos;
+CREATE TABLE Odontologos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS Pacientes;
+CREATE TABLE Pacientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI INT,
+    fecha_alta TIME WITH TIME ZONE
+);
+
+DROP TABLE IF EXISTS Turnos;
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+
+DROP TABLE IF EXISTS Usuarios;
+CREATE TABLE Usuarios(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    username VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    role VARCHAR(255)
+);
+  2022-07-10 21:36:53 ERROR DataLoader:70 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);\000d\000a\000d\000aDROP TABLE IF EXISTS Usuarios;\000d\000aCREATE TABLE Usuarios(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    nombre VARCHAR(255),\000d\000a    username VARCHAR(255),\000d\000a    email VARCHAR(255),\000d\000a    password VARCHAR(255),\000d\000a    role VARCHAR(255)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);\000d\000a\000d\000aDROP TABLE IF EXISTS Usuarios;\000d\000aCREATE TABLE Usuarios(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    nombre VARCHAR(255),\000d\000a    username VARCHAR(255),\000d\000a    email VARCHAR(255),\000d\000a    password VARCHAR(255),\000d\000a    role VARCHAR(255)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+
+DROP TABLE IF EXISTS Usuarios;
+CREATE TABLE Usuarios(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    username VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    role VARCHAR(255)
+); [42001-214]
+  2022-07-10 21:36:53 WARN  DataLoader:81 - Llenando tablas con datos
+  2022-07-10 21:36:54 WARN  DataLoader:95 - Data cargada
+  2022-07-10 21:36:54 WARN  DataLoader:24 - Cargando usuarios en la base
+  2022-07-10 21:36:54 WARN  DataLoader:32 - Se han agregado usuarios en la base
+  2022-07-10 21:37:54 INFO  DataLoader:60 - Ejecutando creación de tablas
+  2022-07-10 21:37:54 ERROR DataLoader:69 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);\000d\000a\000d\000aDROP TABLE IF EXISTS Usuarios;\000d\000aCREATE TABLE Usuarios(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    nombre VARCHAR(255),\000d\000a    username VARCHAR(255),\000d\000a    email VARCHAR(255),\000d\000a    password VARCHAR(255),\000d\000a    role VARCHAR(255)\000d\000a);"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    horario TIMESTAMP WITH TIME ZONE\000d\000a    [*]foreign key (odontologo_id) references Odontologos(id)\000d\000a    foreign key (paciente_id) references Pacientes(id)\000d\000a);\000d\000a\000d\000aDROP TABLE IF EXISTS Usuarios;\000d\000aCREATE TABLE Usuarios(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    nombre VARCHAR(255),\000d\000a    username VARCHAR(255),\000d\000a    email VARCHAR(255),\000d\000a    password VARCHAR(255),\000d\000a    role VARCHAR(255)\000d\000a);"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Turnos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    horario TIMESTAMP WITH TIME ZONE
+    foreign key (odontologo_id) references Odontologos(id)
+    foreign key (paciente_id) references Pacientes(id)
+);
+
+DROP TABLE IF EXISTS Usuarios;
+CREATE TABLE Usuarios(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    username VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    role VARCHAR(255)
+); [42001-214]
+  2022-07-10 21:37:54 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 21:37:54 INFO  DataLoader:94 - Data cargada
+  2022-07-10 21:37:54 INFO  DataLoader:24 - Cargando usuarios en la base
+  2022-07-10 21:37:54 INFO  DataLoader:32 - Se han agregado usuarios en la base
+  2022-07-10 21:40:39 INFO  DataLoader:60 - Ejecutando creación de tablas
+  2022-07-10 21:40:39 ERROR DataLoader:69 - Error al crear tablas: Error de Sintaxis en sentencia SQL "CREATE TABLE Turnos(\000d\000aid INT AUTO_INCREMENT PRIMARY KEY,\000d\000ahorario TIMESTAMP WITH TIME ZONE,\000d\000aforeign key (odontologo_id) references Odontologos(id),\000d\000aforeign key (paciente_id) references Pacientes(id),\000d\000a[*]);\000d\000a\000d\000aDROP TABLE IF EXISTS Usuarios;\000d\000aCREATE TABLE Usuarios(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    nombre VARCHAR(255),\000d\000a    username VARCHAR(255),\000d\000a    email VARCHAR(255),\000d\000a    password VARCHAR(255),\000d\000a    role VARCHAR(255)\000d\000a);"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE Turnos(\000d\000aid INT AUTO_INCREMENT PRIMARY KEY,\000d\000ahorario TIMESTAMP WITH TIME ZONE,\000d\000aforeign key (odontologo_id) references Odontologos(id),\000d\000aforeign key (paciente_id) references Pacientes(id),\000d\000a[*]);\000d\000a\000d\000aDROP TABLE IF EXISTS Usuarios;\000d\000aCREATE TABLE Usuarios(\000d\000a    id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    nombre VARCHAR(255),\000d\000a    username VARCHAR(255),\000d\000a    email VARCHAR(255),\000d\000a    password VARCHAR(255),\000d\000a    role VARCHAR(255)\000d\000a);"; expected "identifier"; SQL statement:
+CREATE TABLE Turnos(
+id INT AUTO_INCREMENT PRIMARY KEY,
+horario TIMESTAMP WITH TIME ZONE,
+foreign key (odontologo_id) references Odontologos(id),
+foreign key (paciente_id) references Pacientes(id),
+);
+
+DROP TABLE IF EXISTS Usuarios;
+CREATE TABLE Usuarios(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    username VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    role VARCHAR(255)
+); [42001-214]
+  2022-07-10 21:40:39 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 21:40:39 INFO  DataLoader:94 - Data cargada
+  2022-07-10 21:40:39 INFO  DataLoader:24 - Cargando usuarios en la base
+  2022-07-10 21:40:40 INFO  DataLoader:32 - Se han agregado usuarios en la base
+  2022-07-10 21:41:13 INFO  DataLoader:60 - Ejecutando creación de tablas
+  2022-07-10 21:41:13 ERROR DataLoader:69 - Error al crear tablas: Columna "ODONTOLOGO_ID" no encontrada
+Column "ODONTOLOGO_ID" not found; SQL statement:
+CREATE TABLE Turnos( id INT AUTO_INCREMENT PRIMARY KEY, horario TIMESTAMP WITH TIME ZONE,
+foreign key (odontologo_id) references Odontologos(id),
+foreign key (paciente_id) references Pacientes(id) ) [42122-214]
+  2022-07-10 21:41:13 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 21:41:13 INFO  DataLoader:94 - Data cargada
+  2022-07-10 21:41:13 INFO  DataLoader:24 - Cargando usuarios en la base
+  2022-07-10 21:41:13 INFO  DataLoader:32 - Se han agregado usuarios en la base
+  2022-07-10 21:41:50 INFO  DataLoader:60 - Ejecutando creación de tablas
+  2022-07-10 21:41:50 ERROR DataLoader:69 - Error al crear tablas: Columna "ODONTOLOGO_ID" no encontrada
+Column "ODONTOLOGO_ID" not found; SQL statement:
+CREATE TABLE Turnos( id INT AUTO_INCREMENT PRIMARY KEY, horario TIMESTAMP WITH TIME ZONE, foreign key (odontologo_id) references Odontologos(id), foreign key (paciente_id) references Pacientes(id) ) [42122-214]
+  2022-07-10 21:41:50 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 21:41:50 INFO  DataLoader:94 - Data cargada
+  2022-07-10 21:41:50 INFO  DataLoader:24 - Cargando usuarios en la base
+  2022-07-10 21:41:51 INFO  DataLoader:32 - Se han agregado usuarios en la base
+  2022-07-10 21:43:46 INFO  DataLoader:60 - Ejecutando creación de tablas
+  2022-07-10 21:43:46 ERROR DataLoader:69 - Error al crear tablas: Columna "ODONTOLOGO_ID" no encontrada
+Column "ODONTOLOGO_ID" not found; SQL statement:
+CREATE TABLE Turnos( id INT AUTO_INCREMENT PRIMARY KEY, horario TIMESTAMP WITH TIME ZONE, CONSTRAINT FK_TURNO_ODONTOLOGO foreign key (odontologo_id) references Odontologos(id), CONSTRAINT FK_TURNO_PACIENTE foreign key (paciente_id) references Pacientes(id) ) [42122-214]
+  2022-07-10 21:43:46 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 21:43:46 INFO  DataLoader:94 - Data cargada
+  2022-07-10 21:43:46 INFO  DataLoader:24 - Cargando usuarios en la base
+  2022-07-10 21:43:47 INFO  DataLoader:32 - Se han agregado usuarios en la base
+  2022-07-10 21:44:35 INFO  DataLoader:60 - Ejecutando creación de tablas
+  2022-07-10 21:44:35 INFO  DataLoader:66 - Tablas creada exitosamente
+  2022-07-10 21:44:35 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 21:44:35 INFO  DataLoader:94 - Data cargada
+  2022-07-10 21:44:35 INFO  DataLoader:24 - Cargando usuarios en la base
+  2022-07-10 21:44:35 INFO  DataLoader:32 - Se han agregado usuarios en la base
+  2022-07-10 21:45:08 INFO  DataLoader:60 - Ejecutando creación de tablas
+  2022-07-10 21:45:08 ERROR DataLoader:69 - Error al crear tablas: Imposible eliminar "ODONTOLOGOS" debido a que "FK_TURNO_ODONTOLOGO" depende de él.
+Cannot drop "ODONTOLOGOS" because "FK_TURNO_ODONTOLOGO" depends on it; SQL statement:
+DROP TABLE IF EXISTS Odontologos [90107-214]
+  2022-07-10 21:45:08 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 21:45:08 INFO  DataLoader:94 - Data cargada
+  2022-07-10 21:45:08 INFO  DataLoader:24 - Cargando usuarios en la base
+  2022-07-10 21:45:08 INFO  DataLoader:32 - Se han agregado usuarios en la base
+  2022-07-10 21:46:25 INFO  DataLoader:60 - Ejecutando creación de tablas
+  2022-07-10 21:46:25 INFO  DataLoader:66 - Tablas creada exitosamente
+  2022-07-10 21:46:25 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 21:46:25 INFO  DataLoader:94 - Data cargada
+  2022-07-10 21:46:25 INFO  DataLoader:24 - Cargando usuarios en la base
+  2022-07-10 21:46:26 INFO  DataLoader:32 - Se han agregado usuarios en la base
+  2022-07-10 21:46:34 INFO  DataLoader:60 - Ejecutando creación de tablas
+  2022-07-10 21:46:34 INFO  DataLoader:66 - Tablas creada exitosamente
+  2022-07-10 21:46:34 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 21:46:34 INFO  DataLoader:94 - Data cargada
+  2022-07-10 21:46:34 INFO  DataLoader:24 - Cargando usuarios en la base
+  2022-07-10 21:46:34 INFO  DataLoader:32 - Se han agregado usuarios en la base
+  2022-07-10 21:52:59 INFO  DataLoader:60 - Ejecutando creacion de tablas
+  2022-07-10 21:52:59 INFO  DataLoader:66 - Tablas creada exitosamente
+  2022-07-10 21:52:59 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 21:52:59 INFO  DataLoader:94 - Data cargada
+  2022-07-10 21:52:59 INFO  DataLoader:24 - Cargando usuarios en la base
+  2022-07-10 21:52:59 INFO  DataLoader:32 - Se han agregado usuarios en la base
+  2022-07-10 21:59:55 INFO  DataLoader:60 - Ejecutando creacion de tablas
+  2022-07-10 21:59:55 INFO  DataLoader:66 - Tablas creada exitosamente
+  2022-07-10 21:59:55 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 21:59:55 ERROR DataLoader:97 - Error cargar tablas con datos: could not prepare statement; nested exception is org.hibernate.exception.JDBCConnectionException: could not prepare statement
+  2022-07-10 21:59:55 INFO  DataLoader:24 - Cargando usuarios en la base
+  2022-07-10 22:00:00 INFO  DataLoader:60 - Ejecutando creacion de tablas
+  2022-07-10 22:00:00 INFO  DataLoader:66 - Tablas creada exitosamente
+  2022-07-10 22:00:00 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 22:00:00 INFO  DataLoader:94 - Data cargada
+  2022-07-10 22:00:00 INFO  DataLoader:24 - Cargando usuarios en la base
+  2022-07-10 22:00:00 INFO  DataLoader:32 - Se han agregado usuarios en la base
+  2022-07-10 22:05:04 INFO  DataLoader:60 - Ejecutando creacion de tablas
+  2022-07-10 22:05:04 INFO  DataLoader:66 - Tablas creada exitosamente
+  2022-07-10 22:05:04 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 22:05:04 INFO  DataLoader:94 - Data cargada
+  2022-07-10 22:05:04 INFO  DataLoader:25 - Cargando usuarios en la base
+  2022-07-10 22:05:04 INFO  DataLoader:33 - Se han agregado usuarios en la base
+  2022-07-10 22:10:09 INFO  DataLoader:60 - Ejecutando creacion de tablas
+  2022-07-10 22:10:09 INFO  DataLoader:66 - Tablas creada exitosamente
+  2022-07-10 22:10:09 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 22:10:09 INFO  DataLoader:94 - Data cargada
+  2022-07-10 22:10:09 INFO  DataLoader:25 - Cargando usuarios en la base
+  2022-07-10 22:10:09 INFO  DataLoader:33 - Se han agregado usuarios en la base
+  2022-07-10 22:16:35 INFO  DataLoader:60 - Ejecutando creacion de tablas
+  2022-07-10 22:16:35 INFO  DataLoader:66 - Tablas creada exitosamente
+  2022-07-10 22:16:35 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 22:16:35 INFO  DataLoader:94 - Data cargada
+  2022-07-10 22:16:35 INFO  DataLoader:25 - Cargando usuarios en la base
+  2022-07-10 22:16:35 INFO  DataLoader:33 - Se han agregado usuarios en la base
+  2022-07-10 22:17:11 INFO  DataLoader:60 - Ejecutando creacion de tablas
+  2022-07-10 22:17:11 INFO  DataLoader:66 - Tablas creada exitosamente
+  2022-07-10 22:17:11 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 22:17:11 INFO  DataLoader:94 - Data cargada
+  2022-07-10 22:17:11 INFO  DataLoader:25 - Cargando usuarios en la base
+  2022-07-10 22:17:11 INFO  DataLoader:33 - Se han agregado usuarios en la base
+  2022-07-10 22:20:41 INFO  DataLoader:60 - Ejecutando creacion de tablas
+  2022-07-10 22:20:41 INFO  DataLoader:66 - Tablas creada exitosamente
+  2022-07-10 22:20:41 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 22:20:41 INFO  DataLoader:94 - Data cargada
+  2022-07-10 22:20:41 INFO  DataLoader:25 - Cargando usuarios en la base
+  2022-07-10 22:20:41 INFO  DataLoader:33 - Se han agregado usuarios en la base
+  2022-07-10 22:57:10 INFO  DataLoader:60 - Ejecutando creacion de tablas
+  2022-07-10 22:57:10 INFO  DataLoader:66 - Tablas creada exitosamente
+  2022-07-10 22:57:10 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 22:57:10 INFO  DataLoader:94 - Data cargada
+  2022-07-10 22:57:10 INFO  DataLoader:25 - Cargando usuarios en la base
+  2022-07-10 22:57:10 INFO  DataLoader:33 - Se han agregado usuarios en la base
+  2022-07-10 23:04:44 INFO  DataLoader:60 - Ejecutando creacion de tablas
+  2022-07-10 23:04:44 INFO  DataLoader:66 - Tablas creada exitosamente
+  2022-07-10 23:04:44 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 23:04:44 INFO  DataLoader:94 - Data cargada
+  2022-07-10 23:04:44 INFO  DataLoader:25 - Cargando usuarios en la base
+  2022-07-10 23:04:45 INFO  DataLoader:33 - Se han agregado usuarios en la base
+  2022-07-10 23:06:05 INFO  DataLoader:60 - Ejecutando creacion de tablas
+  2022-07-10 23:06:05 ERROR DataLoader:69 - Error al crear tablas: Archivo corrupto mientras se leía el registro: null. Solución Posible: use la herramienta de recuperación (recovery tool)
+File corrupted while reading record: null. Possible solution: use the recovery tool [90030-200]
+  2022-07-10 23:06:05 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 23:06:05 INFO  DataLoader:94 - Data cargada
+  2022-07-10 23:06:05 INFO  DataLoader:25 - Cargando usuarios en la base
+  2022-07-10 23:06:05 INFO  DataLoader:33 - Se han agregado usuarios en la base
+  2022-07-10 23:10:40 INFO  DataLoader:60 - Ejecutando creacion de tablas
+  2022-07-10 23:10:40 ERROR DataLoader:69 - Error al crear tablas: Archivo corrupto mientras se leía el registro: null. Solución Posible: use la herramienta de recuperación (recovery tool)
+File corrupted while reading record: null. Possible solution: use the recovery tool [90030-200]
+  2022-07-10 23:10:40 INFO  DataLoader:80 - Llenando tablas con datos
+  2022-07-10 23:10:40 INFO  DataLoader:94 - Data cargada
+  2022-07-10 23:10:40 INFO  DataLoader:25 - Cargando usuarios en la base
+  2022-07-10 23:10:41 INFO  DataLoader:33 - Se han agregado usuarios en la base
+  
